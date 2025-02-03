@@ -51,3 +51,7 @@ body {
 .hidden {
   visibility: hidden;
 }
+
+#mimeTypes {
+  margin-top: 30px;
+}
