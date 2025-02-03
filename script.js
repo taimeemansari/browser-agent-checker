@@ -11,8 +11,8 @@ async function copyToClipBoard() {
 function isFxFocusCheck() {
   let userAgent = navigator.userAgent.toLowerCase();
   const isFxFocusToast = document.querySelector("#isFxFocusToast");
-  const isFFiOs = !!userAgent.match(/fxios/i) && userAgent.match(/safari/i) === null;
-  const isFFAndriod = !!userAgent.match(/android/i) && !!userAgent.match(/firefox/i);
+  const isFFiOs = /fxios/.test(userAgent) && !/safari/.test(userAgent);
+  const isFFAndriod = /android/.test(userAgent) && /firefox/.test(userAgent);
   const noServiceWorker = !("serviceWorker" in navigator);
 
   if ((isFFiOs || isFFAndriod) && noServiceWorker) {
