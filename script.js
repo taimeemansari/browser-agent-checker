@@ -42,7 +42,7 @@ function detectBrowser() {
   userAgentBlock.innerHTML = userAgent;
   cookieEnabled.innerHTML = `Cookie Enabled: ${navigator.cookieEnabled}`;
   pdfViewer.innerHTML = `PDF Viewer: ${navigator.cookieEnabled}`;
-  serviceWorker.innerHTML = `Service Worker: ${"serviceWorker" in navigator ? "suppported" : "not"}`;
+  serviceWorker.innerHTML = `${"serviceWorker" in navigator}`;
 }
 
 window.onload = function (e) {
