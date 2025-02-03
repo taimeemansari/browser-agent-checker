@@ -52,6 +52,7 @@ body {
   visibility: hidden;
 }
 
-#mimeTypes {
+#mimeTypes,
+#storage {
   margin-top: 30px;
 }
