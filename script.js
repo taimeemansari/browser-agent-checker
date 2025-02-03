@@ -11,11 +11,10 @@ async function copyToClipBoard() {
 function isFxFocusCheck() {
   let userAgent = navigator.userAgent.toLowerCase();
   const isFxFocusToast = document.querySelector("#isFxFocusToast");
-  const isFFiOs = /fxios/.test(userAgent) && !/safari/.test(userAgent);
-  const isFFAndriod = /android/.test(userAgent) && /firefox/.test(userAgent);
-  const noServiceWorker = !("serviceWorker" in navigator);
+  const isFxFociOS = /fxios/.test(userAgent) && !/safari/.test(userAgent);
+  const isFxFocAndriod = /android/.test(userAgent) && /firefox/.test(userAgent);
 
-  if ((isFFiOs || isFFAndriod) && noServiceWorker) {
+  if (isFxFociOS || (isFxFocAndriod && !("serviceWorker" in navigator))) {
     isFxFocusToast.innerHTML = "yay! its firefox focus browser";
     isFxFocusToast.classList.remove("hidden");
   } else {
