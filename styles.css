@@ -31,15 +31,7 @@ body {
   color: #212121;
   margin-top: 20px;
   border: 1px solid #1e1e1d;
-  min-width: 500px;
-}
-
-@media (max-width: 499px) {
-  #user-agent-code-block {
-    width: auto;
-    min-width: auto;
-    max-width: 70%;
-  }
+  width: min(70vw, 400px);
 }
 
 #copyAction {
