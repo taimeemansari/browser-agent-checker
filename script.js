@@ -19,9 +19,9 @@ function detectBrowser() {
   copyAction.addEventListener("click", copyToClipBoard);
   userAgentBlock.innerHTML = userAgent;
   cookieEnabled.innerHTML = `pdf viewer enable: ${navigator}`;
-  plugins.innerHTML = `plugins: ${navigator.plugins.length}`;
+  plugins.innerHTML = `serviceWorker: ${"serviceWorker" in navigator ? "suppported" : "not"}`;
 
-  console.log(navigator.plugins.length);
+  //console.log("serviceWorker" in navigator ? "supo");
 }
 
 window.onload = function (e) {
