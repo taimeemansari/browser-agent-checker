@@ -15,7 +15,7 @@ function isFxFocusCheck() {
   const isFFAndriod = !!userAgent.match(/android/i) && !!userAgent.match(/firefox/i);
   const isServiceWorkerSupported = `${"serviceWorker" in navigator}`;
 
-  if ((isFFiOs || isFFAndriod) && isServiceWorkerSupported) {
+  if ((isFFiOs || isFFAndriod) && !!isServiceWorkerSupported) {
     isFxFocusToast.innerHTML = "yay! its firefox focus browser";
     isFxFocusToast.classList.remove("hidden");
   } else {
