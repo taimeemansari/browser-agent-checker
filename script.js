@@ -13,7 +13,7 @@ function isFxFocusCheck() {
   const isFxFocusToast = document.querySelector("#isFxFocusToast");
   const isFFiOs = !!userAgent.match(/fxios/i) && userAgent.match(/safari/i) === null;
   const isFFAndriod = !!userAgent.match(/android/i) && !!userAgent.match(/firefox/i);
-  const isServiceWorkerSupported = `${"serviceWorker" in navigator}`;
+  const isServiceWorkerSupported = `${"serviceWorker" in navigator}` === "true";
 
   if ((isFFiOs || isFFAndriod) && !!isServiceWorkerSupported) {
     isFxFocusToast.innerHTML = "yay! its firefox focus browser";
@@ -42,7 +42,7 @@ function detectBrowser() {
   userAgentBlock.innerHTML = userAgent;
   cookieEnabled.innerHTML = `Cookie Enabled: ${navigator.cookieEnabled}`;
   pdfViewer.innerHTML = `PDF Viewer: ${navigator.cookieEnabled}`;
-  serviceWorker.innerHTML = `${"serviceWorker" in navigator}`;
+  serviceWorker.innerHTML = `${"serviceWorker" in navigator === "true" ? "supported" : "not supported"}`;
 }
 
 window.onload = function (e) {
